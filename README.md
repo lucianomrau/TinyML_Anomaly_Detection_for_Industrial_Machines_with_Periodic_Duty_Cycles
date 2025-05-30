@@ -18,9 +18,11 @@ See the 'requirement.txt' file
 
 ## Cite
 If you use this code or the paper, please cite as:
+
 L. S. Martinez-Rau, Y. Zhang, B. Oelmann and S. Bader, "TinyML Anomaly Detection for Industrial Machines with Periodic Duty Cycles," 2024 IEEE Sensors Applications Symposium (SAS), Naples, Italy, 2024, pp. 1-6, doi: 10.1109/SAS60918.2024.10636584.
 
 or use the BibTeX:
+
 @INPROCEEDINGS{10636584,
   author={Martinez-Rau, Luciano Sebastian and Zhang, Yuxuan and Oelmann, Bengt and Bader, Sebastian},
   booktitle={2024 IEEE Sensors Applications Symposium (SAS)}, 
