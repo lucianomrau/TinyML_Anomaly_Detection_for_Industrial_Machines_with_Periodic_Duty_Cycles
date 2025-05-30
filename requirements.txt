@@ -1,0 +1,10 @@
+dcase_util==0.2.20
+emlearn==0.19.3
+imbalanced_learn==0.10.1
+matplotlib==3.7.0
+micromlgen==1.1.28
+numpy==1.23.0
+pandas==2.0.0
+scikit_learn==1.2.2
+sed_eval==0.2.1
+xgboost==1.7.5
