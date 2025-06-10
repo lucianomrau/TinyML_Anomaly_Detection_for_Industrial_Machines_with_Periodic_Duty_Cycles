@@ -9,7 +9,6 @@ Code associated with the publication ["Tinyml anomaly detection for industrial m
 It contains a jupyter notebook to train/test the ML models and the c-code to run the models on microcontrollers. 
 
 ## Data
-The original csv input data file ('Confidential_Drive_data_Jun2021.csv') are no available due to 
 The csv input files ('Confidential_Drive_data_Jun2021.csv', 'Confidential_Drive_data_Okt2021.csv','Confidential_Drive_data_Jan2022.csv' and 'Confidential_Drive_data_April2022.csv') are not available due to conflicts of interest of the parties involved in this project.
 However, an "input_data.csv" example file is provide to evaluate the models.
 
