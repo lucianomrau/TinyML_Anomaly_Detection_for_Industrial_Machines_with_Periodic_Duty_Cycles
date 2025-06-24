@@ -7,10 +7,17 @@ from sklearn.metrics import ConfusionMatrixDisplay, balanced_accuracy_score, f1_
 import matplotlib.pyplot as plt
 
 
-def read_month_data(name):
-    column_interest=['TimeStamp' , 'Pressure High Drive 1  - Pressure [bar]','Pressure Low Drive 1  - Pressure [bar]', 'Actual Speed Drive 1 - Revolutions [rpm]']
-    data = pd.read_csv(name, encoding="latin_1",sep=';', usecols=column_interest)
-    data.rename(columns = {'TimeStamp':'Timestamp' , 'Pressure High Drive 1  - Pressure [bar]':'High-pressure', 'Pressure Low Drive 1  - Pressure [bar]': 'Low-pressure', 'Actual Speed Drive 1 - Revolutions [rpm]':'Speed'}, inplace = True)
+def read_month_data(name,label_opt=0):
+    # There are two different columns name format.
+    # label_opt=1 specify one of these format.
+    if label_opt==1:
+        column_interest=['TimeStamp' , 'Pressure High Drive 1  - Pressure [bar]','Pressure Low Drive 1  - Pressure [bar]', 'Actual Speed Drive 1 - Revolutions [rpm]']
+        data = pd.read_csv(name, encoding="latin_1",sep=';', usecols=column_interest)
+        data.rename(columns = {'TimeStamp':'Timestamp' , 'Pressure High Drive 1  - Pressure [bar]':'High-pressure', 'Pressure Low Drive 1  - Pressure [bar]': 'Low-pressure', 'Actual Speed Drive 1 - Revolutions [rpm]':'Speed'}, inplace = True)
+    else:
+        column_interest=['time' , 'Pressure High Drive 1','Pressure Low Drive 1', 'Actual Speed Drive 1']
+        data = pd.read_csv(name,sep=';', usecols=column_interest)
+        data.rename(columns = {'time':'Timestamp' , 'Pressure High Drive 1':'High-pressure', 'Pressure Low Drive 1': 'Low-pressure', 'Actual Speed Drive 1':'Speed'}, inplace = True)
     data['Timestamp'] = pd.to_datetime(data['Timestamp'])
     data.set_index('Timestamp', inplace = True)
     data.reindex()
